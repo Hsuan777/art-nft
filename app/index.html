@@ -5,4 +5,263 @@ engine: ejs
 current: index
 ---
 
-<p class="text-3xl font-bold underline">This is a demo.</p>
+<section class="container">
+  <div class="grid grid-cols-2">
+    <ul>
+      <li></li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- Ranking -->
+<section class="container mb-20">
+  <div class="flex justify-between items-end border-b border-black mb-12">
+    <h2>
+      <span class="text-5xl font-squada mr-4">Ranking</span>
+      <span class="text-xl font-bold">市價排行榜</span>
+    </h2>
+    <button type="button" class="group relative btn btn-outline-primary border-transparent border-b-0 rounded-none flex py-2 px-12 text-lg font-squada">
+      MORE
+      <span class="triangle-rb absolute bottom-0 -right-[1px] group-hover:border-b-black"></span>
+    </button>
+  </div>
+  <ul class="hidden md:grid md:grid-cols-3 gap-6 mb-6">
+    <li class="group bg-white border border-black">
+      <a href="#" class="">
+        <div class="relative bg-[url('../images/art04.jpg')] h-[374px] bg-cover bg-top">
+          <p class="absolute top-0 left-0 font-paytone text-4xl px-4 bg-white">1</p>
+          <div class="opacity-0 group-hover:opacity-100">
+            <span class="absolute text-white py-2 px-12 bg-primary border border-black bottom-0 right-0 font-squada">MORE</span>
+            <span class="triangle-rb absolute bottom-0 right-0 border-b-black"></span>
+          </div>
+        </div>
+        <div class="w-full">
+          <h3 class="border-b border-black p-4 text-lg font-bold">散步遇到的女人</h3>
+          <p class="font-squada flex py-2 px-4 leading-none">
+            <span>Zoe Jiang</span>
+            <img src="./assets/images/ether.png" alt="" class="w-2 object-cover ml-auto mr-2" />
+            <span>300</span>
+          </p>
+        </div>
+      </a>
+    </li>
+    <li class="group bg-white border border-black">
+      <a href="#" class="">
+        <div class="relative bg-[url('../images/art05.jpg')] h-[374px] bg-cover bg-top">
+          <p class="absolute top-0 left-0 font-paytone text-4xl px-4 bg-white">2</p>
+          <div class="opacity-0 group-hover:opacity-100">
+            <span class="absolute text-white py-2 px-12 bg-primary border border-black bottom-0 right-0 font-squada">MORE</span>
+            <span class="triangle-rb absolute bottom-0 right-0 border-b-black"></span>
+          </div>
+        </div>
+        <div class="w-full">
+          <h3 class="border-b border-black p-4 text-lg font-bold">爆炸頭的母親</h3>
+          <p class="font-squada flex py-2 px-4 leading-none">
+            <span>Yui</span>
+            <img src="./assets/images/ether.png" alt="" class="w-2 object-cover ml-auto mr-2" />
+            <span>300</span>
+          </p>
+        </div>
+      </a>
+    </li>
+    <li class="group bg-white border border-black">
+      <a href="#" class="">
+        <div class="relative bg-[url('../images/art06.jpg')] h-[374px] bg-cover bg-top">
+          <p class="absolute top-0 left-0 font-paytone text-4xl px-4 bg-white">3</p>
+          <div class="opacity-0 group-hover:opacity-100">
+            <span class="absolute text-white py-2 px-12 bg-primary border border-black bottom-0 right-0 font-squada">MORE</span>
+            <span class="triangle-rb absolute bottom-0 right-0 border-b-black"></span>
+          </div>
+        </div>
+        <div class="w-full">
+          <h3 class="border-b border-black p-4 text-lg font-bold">夏天的時候</h3>
+          <p class="font-squada flex py-2 px-4 leading-none">
+            <span>Bug Lin</span>
+            <img src="./assets/images/ether.png" alt="" class="w-2 object-cover ml-auto mr-2" />
+            <span>300</span>
+          </p>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <ul class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <li class="md:hidden group bg-white border border-black">
+      <a href="#" class="flex items-center">
+        <p class="font-paytone text-2xl py-6 px-4">1</p>
+        <div class="relative">
+          <img src="./assets/images/art04.jpg" alt="artist04" class="min-w-[87px] h-[92px] border-x border-black object-cover" />
+          <div class="opacity-0 group-hover:opacity-100">
+            <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+            </span>
+            <span class="absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center text-white font-squada">MORE</span>
+            <span class="triangle-rb absolute bottom-0 right-0"></span>
+          </div>
+        </div>
+        <div class="w-full">
+          <h3 class="border-b border-black p-4 text-lg font-bold">散步遇到的女人</h3>
+          <p class="font-squada flex py-2 px-4 leading-none">
+            <span>Zoe Jiang</span>
+            <img src="./assets/images/ether.png" alt="" class="w-2 object-cover ml-auto mr-2" />
+            <span>300</span>
+          </p>
+        </div>
+      </a>
+    </li>
+    <li class="md:hidden group bg-white border border-black">
+      <a href="#" class="flex items-center">
+        <p class="font-paytone text-2xl py-6 px-4">2</p>
+        <div class="relative">
+          <img src="./assets/images/art05.jpg" alt="artist05" class="min-w-[87px] h-[92px] border-x border-black object-cover" />
+          <div class="opacity-0 group-hover:opacity-100">
+            <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+            </span>
+            <span class="absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center text-white font-squada">MORE</span>
+            <span class="triangle-rb absolute bottom-0 right-0"></span>
+          </div>
+        </div>
+        <div class="w-full">
+          <h3 class="border-b border-black p-4 text-lg font-bold">爆炸頭的母親</h3>
+          <p class="font-squada flex py-2 px-4 leading-none">
+            <span>Yui</span>
+            <img src="./assets/images/ether.png" alt="" class="w-2 object-cover ml-auto mr-2" />
+            <span>300</span>
+          </p>
+        </div>
+      </a>
+    </li>
+    <li class="md:hidden group bg-white border border-black">
+      <a href="#" class="flex items-center">
+        <p class="font-paytone text-2xl py-6 px-4">3</p>
+        <div class="relative">
+          <img src="./assets/images/art06.jpg" alt="artist06" class="min-w-[87px] h-[92px] border-x border-black object-cover" />
+          <div class="opacity-0 group-hover:opacity-100">
+            <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+            </span>
+            <span class="absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center text-white font-squada">MORE</span>
+            <span class="triangle-rb absolute bottom-0 right-0"></span>
+          </div>
+        </div>
+        <div class="w-full">
+          <h3 class="border-b border-black p-4 text-lg font-bold">夏天的時候</h3>
+          <p class="font-squada flex py-2 px-4 leading-none">
+            <span>Bug Lin</span>
+            <img src="./assets/images/ether.png" alt="" class="w-2 object-cover ml-auto mr-2" />
+            <span>300</span>
+          </p>
+        </div>
+      </a>
+    </li>
+    <li class="group bg-white border border-black">
+      <a href="#" class="flex items-center">
+        <p class="font-paytone text-2xl py-6 px-4">4</p>
+        <div class="relative">
+          <img src="./assets/images/art13.jpg" alt="artist13" class="min-w-[87px] h-[92px] border-x border-black object-cover" />
+          <div class="opacity-0 group-hover:opacity-100">
+            <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+            </span>
+            <span class="absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center text-white font-squada">MORE</span>
+            <span class="triangle-rb absolute bottom-0 right-0"></span>
+          </div>
+        </div>
+        <div class="w-full">
+          <h3 class="border-b border-black p-4 text-lg font-bold">追求者送我的花</h3>
+          <p class="font-squada flex py-2 px-4 leading-none">
+            <span>Michael</span>
+            <img src="./assets/images/ether.png" alt="" class="w-2 object-cover ml-auto mr-2" />
+            <span>300</span>
+          </p>
+        </div>
+      </a>
+    </li>
+    <li class="group bg-white border border-black">
+      <a href="#" class="flex items-center">
+        <p class="font-paytone text-2xl py-6 px-4">5</p>
+        <div class="relative">
+          <img src="./assets/images/art07.jpg" alt="artist13" class="min-w-[87px] h-[92px] border-x border-black object-cover" />
+          <div class="opacity-0 group-hover:opacity-100">
+            <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+            </span>
+            <span class="absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center text-white font-squada">MORE</span>
+            <span class="triangle-rb absolute bottom-0 right-0"></span>
+          </div>
+        </div>
+        <div class="w-full">
+          <h3 class="border-b border-black p-4 text-lg font-bold">今天釣到的魚</h3>
+          <p class="font-squada flex py-2 px-4 leading-none">
+            <span>Wei JJ</span>
+            <img src="./assets/images/ether.png" alt="" class="w-2 object-cover ml-auto mr-2" />
+            <span>300</span>
+          </p>
+        </div>
+      </a>
+    </li>
+    <li class="group bg-white border border-black">
+      <a href="#" class="flex items-center">
+        <p class="font-paytone text-2xl py-6 px-4">6</p>
+        <div class="relative">
+          <img src="./assets/images/art08.jpg" alt="artist13" class="min-w-[87px] h-[92px] border-x border-black object-cover" />
+          <div class="opacity-0 group-hover:opacity-100">
+            <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+            </span>
+            <span class="absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center text-white font-squada">MORE</span>
+            <span class="triangle-rb absolute bottom-0 right-0"></span>
+          </div>
+        </div>
+        <div class="w-full">
+          <h3 class="border-b border-black p-4 text-lg font-bold">人生中的貓咪們</h3>
+          <p class="font-squada flex py-2 px-4 leading-none">
+            <span>Even Lai</span>
+            <img src="./assets/images/ether.png" alt="" class="w-2 object-cover ml-auto mr-2" />
+            <span>300</span>
+          </p>
+        </div>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<!-- Artist -->
+<section>
+
+</section>
+
+<!-- Artwork -->
+<section>
+
+</section>
+
+<!-- Join Us -->
+<section class="text-center">
+  <h2 class="font-squada text-5xl mb-4">Join Us</h2>
+  <p class="text-xl font-bold mb-10">創建並出售你的藝術品</p>
+  <div class="container"></div>
+  <div class="border-y-4 border-black py-2">
+    <div class="border-y border-black">
+      <div class="container">
+        <ul class="grid grid-cols-1 md:grid-cols-4 gap-6 py-20">
+          <li>
+            <span class="material-icons-outlined text-5xl text-primary">wallet</span>
+            <h3 class="text-lg font-bold mb-6">設置你的錢包</h3>
+            <p>設置好您選擇的錢包後<br>點擊右上角的錢包圖標進行連接</p>
+          </li>
+          <li>
+            <span class="material-icons-outlined text-5xl text-primary">design_services</span>
+            <h3 class="text-lg font-bold mb-6">創建您的主頁</h3>
+            <p>註冊成為會員，編輯您的資料<br>讓大家了解你</p>
+          </li>
+          <li>
+            <span class="material-icons-outlined text-5xl text-primary">wallet</span>
+            <h3 class="text-lg font-bold mb-6">添加你的 NFT</h3>
+            <p>上傳你的作品<br>添加標題和描述</p>
+          </li>
+          <li>
+            <span class="material-icons-outlined text-5xl text-primary">local_offer</span>
+            <h3 class="text-lg font-bold mb-6">列出它們出售</h3>
+            <p>選擇出售 NFT 的方式<br>並設定價格，等待有緣人</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

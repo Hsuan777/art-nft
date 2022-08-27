@@ -1,7 +1,12 @@
 module.exports = {
   content: ["./app/**/*.{html,ejs}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "squada": ["Squada One", "cursive"],
+        "paytone": ["Paytone One", "sans-serif"],
+      },
+    },
     container: {
       center: true,
       padding: "12px",
@@ -22,9 +27,8 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          "primary": "#62DB54",
-          "secondary": "#09ACF5",
-          "third": "#2D2D2D",
+          "primary": "#E6553B",
+          "secondary": "#808080",
           "accent": "#1FB2A6",
           "info": "#3ABFF8",
           "success": "#36D399",
