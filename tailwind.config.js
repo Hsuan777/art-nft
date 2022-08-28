@@ -5,6 +5,7 @@ module.exports = {
       fontFamily: {
         "squada": ["Squada One", "cursive"],
         "paytone": ["Paytone One", "sans-serif"],
+        "noto": ["Noto Sans TC", "sans-serif"],
       },
     },
     container: {
@@ -41,6 +42,9 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require("daisyui")
+    require("daisyui"),
+    require('tailwindcss-writing-mode')({
+      variants: ['responsive', 'hover']
+  })
   ],
 }
