@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./app/**/*.{html,ejs}"],
+  content: ["./app/**/*.{html,ejs}", "./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
       fontFamily: {
@@ -22,6 +22,7 @@ module.exports = {
       "3xl": ["28px", "1.5"],
       "4xl": ["32px", "1.5"],
       "5xl": ["48px", "1.5"],
+      "6xl": ["80px", "1.5"],
     },
   },
   daisyui: {
@@ -45,6 +46,7 @@ module.exports = {
     require("daisyui"),
     require('tailwindcss-writing-mode')({
       variants: ['responsive', 'hover']
-  })
+    }),
+    require('flowbite/plugin'),
   ],
 }
