@@ -1,10 +1,129 @@
----
-title: 藝術家
-layout: ./app/layout.ejs
-engine: ejs
-current: artist
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Paytone+One&family=Squada+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" /> -->
+  <title>藝術家</title>
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <header class="border-b border-black md:mb-10">
+    <!-- <nav class="container flex items-center">
+      <a href="./index.html" class="grow">
+        <img src="./assets/images/logo.svg" alt="logo" class="py-8"/>
+      </a>
+      <div class="relative form-control">
+        <div class="input-group">
+          <input type="text" placeholder="搜尋作品名稱、藝術家名稱" class="input w-80 bg-transparent input-bordered border-0 border-none focus:border-0 focus:ring-transparent focus:outline-none" />
+          <button class="btn btn-square border-0 text-black font-bold hover:bg-transparent hover:text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+          </button>
+        </div>
+        <span class="hidden lg:block absolute h-[104px] border border-black -top-[28px] left-0"></span>
+      </div>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="navbar" class="hidden w-full md:block md:w-auto">
+        <ul class="hidden lg:flex items-center">
+          <li class="relative">
+            <a href="" class="text-black py-2 px-6">
+              <span class="rounded-lg py-3 px-6 hover:bg-primary hover:text-white">市值</span>
+            </a>
+            <span class="hidden lg:block absolute h-[104px] border border-black -top-[40px] left-0"></span>
+          </li>
+          <li class="relative">
+            <a href="" class="text-black py-2 px-6">
+              <span class="material-icons-outlined rounded-lg py-3 px-6 hover:bg-primary hover:text-white">wallet</span>
+            </a>
+            <span class="hidden lg:block absolute h-[104px] border border-black -top-[30px] left-0"></span>
+          </li>
+        </ul>
+      </div>
+    </nav> -->
+
+    <nav class="bg-transparent">
+      <div class="container flex flex-wrap justify-between items-center">
+        <a id="logo" href="./index.html" class="lg:grow">
+          <img src="./assets/images/logo.svg" alt="logo" class="py-3 lg:py-8 w-[85px] lg:w-auto lg:h-auto object-cover"/>
+        </a>
+        <button id="resetNavbarMenu" type="button" class="hidden">
+          <span class="material-icons-outlined flex">chevron_left</span>
+        </button>
+        <div class="relative form-control grow lg:w-auto">
+          <div class="input-group">
+            <input id="navbarSearchInput" type="text" placeholder="搜尋作品名稱、藝術家名稱" class="input hidden w-full lg:inline-block bg-transparent input-bordered border-0 focus:border-0 focus:ring-transparent focus:outline-none" />
+            <button id="navbarSearch" class="btn btn-square border-0 text-black font-bold hover:bg-transparent hover:text-primary ml-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+            </button>
+          </div>
+          <span class="hidden lg:block absolute h-[104px] border border-black -top-[28px] left-0"></span>
+        </div>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg id="mobileMenu" class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <svg id="mobileMenuClose" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+        <div class="hidden w-full fixed top-12 left-0 right-0 border-t border-black" id="navbar-default">
+          <ul class="flex flex-col px-3 bg-white text-center">
+            <li class="border-b border-black">
+              <a href="#" class="block w-full text-black py-6 text-lg font-bold hover:bg-primary hover:text-white">
+                錢包
+              </a>
+            </li>
+            <li class="">
+              <a href="#" class="block w-full text-black py-6 text-lg font-bold hover:bg-primary hover:text-white">
+                市值
+              </a>
+            </li>
+            <li class="pb-6">
+              <input type="button" value="連結錢包" class="btn btn-primary border-black rounded-none w-full text-lg text-white"/>
+            </li>
+          </ul>
+        </div>
+        <ul class="hidden lg:flex items-center">
+          <li class="relative">
+            <a href="" class="text-black py-2 px-6">
+              <span class="rounded-lg py-3 px-6 hover:bg-primary hover:text-white">市值</span>
+            </a>
+            <span class="hidden lg:block absolute h-[104px] border border-black -top-[40px] left-0"></span>
+          </li>
+          <li class="relative">
+            <a href="" class="text-black py-2 px-6">
+              <span class="material-icons-outlined rounded-lg py-3 px-6 hover:bg-primary hover:text-white">wallet</span>
+            </a>
+            <span class="hidden lg:block absolute h-[104px] border border-black -top-[30px] left-0"></span>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  
 <section class="container grid grid-cols-1 lg:grid-cols-12 gap-6 mb-20 mt-6 md:mt-0">
   <div class="lg:col-span-9 border border-black">
     <div class="flex flex-wrap h-full">
@@ -376,3 +495,17 @@ current: artist
     </div>
   </div>
 </div>
+
+
+  <footer class="text-center border-t-2 border-black pt-2">
+   <p class="border-t-4 border-black w-full py-6">© ART NFT. All Rights Reserved</p>
+  </footer>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
