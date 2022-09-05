@@ -19,6 +19,12 @@
   .triangle-rb {
     @apply border-l-[16px] border-b-[16px] border-t-0 border-r-0 border-solid border-x-transparent border-t-transparent border-b-primary
   }
+  .triangle-rt {
+    @apply border-l-[16px] border-t-[16px] border-b-0 border-r-0 border-solid border-x-transparent border-b-transparent border-t-primary
+  }
+  .triangle-lt {
+    @apply border-r-[16px] border-t-[16px] border-b-0 border-l-0 border-solid border-x-transparent border-b-transparent border-t-primary
+  }
 }
 
 @layer utilities {
@@ -74,6 +80,12 @@
     .grid-sizer,.grid-item {
       width: 23.5%;
     }
-
+  }
+  .text-blue-600 {
+    color: black;
+  }
+  .border-blue-600 {
+    border-color: black;
+    border-bottom: 1px solid #F0F0F0;
   }
 }

@@ -5,27 +5,35 @@ engine: ejs
 current: artist
 ---
 
-<section class="container grid grid-cols-12 gap-6 mb-20">
-  <div class="col-span-9 border border-black">
-    <div class="flex">
-      <div class="w-5/12">
-        <img src="./assets/images/artist01.jpg" alt="artist01"/>
+<section class="container grid grid-cols-1 lg:grid-cols-12 gap-6 mb-20 mt-6 md:mt-0">
+  <div class="lg:col-span-9 border border-black">
+    <div class="flex flex-wrap h-full">
+      <div class="w-full lg:w-5/12">
+        <img src="./assets/images/artist01.jpg" alt="artist01" class="h-full object-cover"/>
       </div>
-      <div class="w-7/12 px-6 pt-6 pb-8 bg-white">
-        <div class="flex justify-between items-center mb-4">
-          <h2 class="text-5xl font-squada mb-4">Michael</h2>
-          <ul>
-            <li>
-              1
+      <div class="w-full lg:w-7/12 p-6 lg:pb-8 bg-white">
+        <div class="flex justify-between items-center">
+          <h2 class="text-5xl font-squada mb-2 leading-[1.35]">Michael</h2>
+          <ul class="flex">
+            <li class="mr-2">
+              <a href="#" class="hover:text-primary">
+                <i class="fa-brands fa-discord"></i>
+              </a>
+            </li>
+            <li class="mr-2">
+              <a href="#" class="hover:text-primary">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="mr-2">
+              <a href="#" class="hover:text-primary">
+                <i class="fa-solid fa-globe"></i>
+              </a>
             </li>
             <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
+              <a href="" class="hover:text-primary">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
             </li>
           </ul>
         </div>
@@ -34,18 +42,18 @@ current: artist
       </div>
     </div>
   </div>
-  <div class="col-span-3">
-    <ul class="border border-black">
+  <div class="lg:col-span-3">
+    <ul class="border border-black w-full">
       <li class="border-b border-black bg-white">
         <p class="flex items-center w-full py-4 px-6">
           <span class="font-bold">販售中</span>
-          <span class="text-4xl font-squada ml-auto">168</span>
+          <span class="text-4xl font-squada ml-auto leading-[1.05]">168</span>
         </p>
       </li>
       <li class="border-b border-black bg-white">
         <p class="flex items-center w-full py-4 px-6">
           <span class="font-bold">地板價格</span>
-          <span class="text-4xl font-squada ml-auto">
+          <span class="text-4xl font-squada ml-auto leading-[1.05]">
             0.6
             <span class="text-2xl">ETH</span>
           </span>
@@ -54,7 +62,7 @@ current: artist
       <li class="border-b border-black bg-white">
         <p class="flex items-center w-full py-4 px-6">
           <span class="font-bold">7 日成交</span>
-          <span class="text-4xl font-squada ml-auto">
+          <span class="text-4xl font-squada ml-auto leading-[1.05]">
             8.8
             <span class="text-2xl">ETH</span>
           </span>
@@ -63,7 +71,7 @@ current: artist
       <li class="bg-white">
         <p class="flex items-center w-full py-4 px-6">
           <span class="font-bold">30 日成交</span>
-          <span class="text-4xl font-squada ml-auto">
+          <span class="text-4xl font-squada ml-auto leading-[1.05]">
             23.1
             <span class="text-2xl">ETH</span>
           </span>
@@ -74,32 +82,297 @@ current: artist
 </section>
 
 <div class="container">
-  <div class="tabs">
-    <a class="tab tab-lifted tab-active">
-      <h2 class="text-5xl font-squada">Art Works</h2>
-      <p class="text-xl font-bold">系列作品</p>
-    </a>
-    <a class="tab tab-lifted ">
-      <h2 class="text-5xl font-squada">Collection</h2>
-      <p class="text-xl font-bold">收藏品</p>
-    </a>
+  <div class="mb-4 border-b border-black">
+    <ul class="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+      <li class="" role="presentation">
+          <button class="inline-block p-4 border border-b-base-100" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">
+            <span class="text-4xl lg:text-5xl font-squada lg:mr-4">Art Works</span>
+            <span class="hidden lg:inline text-xl font-bold">系列作品</span>
+          </button>
+      </li>
+      <li class="" role="presentation">
+          <button class="inline-block p-4 border border-b-base-100" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">
+            <span class="text-4xl lg:text-5xl font-squada lg:mr-4">Collection</span>
+            <span class="hidden lg:inline text-xl font-bold">收藏品</span>
+          </button>
+      </li>
+    </ul>
   </div>
-  <section class="bg-white pt-12 border border-black">
-    <div class="w-10/12 mx-auto">
-      <h3 class="text-2xl font-bold mb-4">追求者送我的花</h3>
-      <div class="flex justify-between">
-        <p>我又沒有特別喜歡花，為什麼不給我現金就好，擺在那也不知道要幹嘛，只好畫起來看有沒有人要買，阿不然如果真的喜歡我，把這些都買回去八。</p>
-        <button type="button" class="group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg font-squada ml-auto items-center">
-          MORE
-          <span class="triangle-rb absolute bottom-0 -right-[1px] group-hover:border-b-black"></span>
-        </button>
+  <div id="myTabContent">
+    <div class="" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="relative bg-white border border-black mb-4 lg:mb-20">
+        <div class="lg:w-10/12 px-4 mx-auto pt-12">
+          <h3 class="text-2xl font-bold mb-4">追求者送我的花</h3>
+          <div class="flex justify-between">
+            <p class="mb-6 lg:mr-20 lg:mb-0 pr-2">我又沒有特別喜歡花，為什麼不給我現金就好，擺在那也不知道要幹嘛，只好畫起來看有沒有人要買，阿不然如果真的喜歡我，把這些都買回去八。</p>
+            <button type="button" class="hidden lg:block group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg font-squada ml-auto items-center">
+              MORE
+              <span class="triangle-rb absolute bottom-0 -right-[1px] group-hover:border-b-black"></span>
+            </button>
+          </div>
+          <ul class="grid grid-cols-1 lg:grid-cols-4 gap-2 lg:translate-y-12 mb-4 lg:mb-0">
+            <li>
+              <img src="./assets/images/the-new-york-public-library-vBejyCBXZBY-unsplash.jpg" alt="" class="p-2 bg-black w-full h-[313px] lg:h-[270px] object-cover object-top md:object-center"/>
+            </li>
+            <li class="hidden lg:block">
+              <img src="./assets/images/art13.jpg" alt="" class="p-2 bg-black w-full h-[270px] object-cover object-top lg:object-center"/>
+            </li>
+            <li class="hidden lg:block">
+              <img src="./assets/images/art14.jpg" alt="" class="p-2 bg-black w-full h-[270px] object-cover object-top lg:object-center"/>
+            </li>
+            <li class="hidden lg:block">
+              <img src="./assets/images/art15.jpg" alt="" class="p-2 bg-black w-full h-[270px] object-cover object-top lg:object-center"/>
+            </li>
+          </ul>
+          <div class="flex">
+            <button type="button" class="lg:hidden group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg font-squada mx-auto items-center mb-8 lg:mb-0">
+              MORE
+              <span class="triangle-rb absolute bottom-0 -right-[1px] group-hover:border-b-black"></span>
+            </button>
+          </div>
+        </div>
+        <span class="triangle-rt absolute top-0 -right-[1px] border-t-black"></span>
+        <span class="triangle-lt absolute top-0 -left-[1px] border-t-black"></span>
       </div>
-      <ul class="grid grid-cols-4 gap-2 translate-y-12">
-        <li><img src="./assets/images/the-new-york-public-library-vBejyCBXZBY-unsplash.jpg" alt="" class="p-2 bg-black w-full h-[270px]"/></li>
-        <li><img src="./assets/images/art13.jpg" alt="" class="p-2 bg-black w-full h-[270px] object-cover"/></li>
-        <li><img src="./assets/images/art14.jpg" alt="" class="p-2 bg-black w-full h-[270px]"/></li>
-        <li><img src="./assets/images/art15.jpg" alt="" class="p-2 bg-black w-full h-[270px]"/></li>
-      </ul>
+      <div class="relative bg-white border border-black mb-4 lg:mb-20">
+        <div class="lg:w-10/12 px-4 mx-auto pt-12">
+          <h3 class="text-2xl font-bold mb-4">我家窗前的鳥</h3>
+          <div class="flex justify-between">
+            <p class="mb-6 lg:mr-20 lg:-0 pr-2">家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什麼我就不說了，希望大家能從作品感受到小鳥的快樂。</p>
+            <button type="button" class="hidden lg:block group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg font-squada ml-auto items-center">
+              MORE
+              <span class="triangle-rb absolute bottom-0 -right-[1px] group-hover:border-b-black"></span>
+            </button>
+          </div>
+          <ul class="grid grid-cols-1 lg:grid-cols-4 gap-2 lg:translate-y-12 mb-4 lg:mb-0">
+            <li>
+              <img src="./assets/images/art27.jpg" alt="art27" class="p-2 bg-black w-full h-[313px] lg:h-[270px] object-cover object-top md:object-center"/>
+            </li>
+            <li class="hidden lg:block">
+              <img src="./assets/images/art20.jpg" alt="art20" class="p-2 bg-black w-full h-[270px] object-cover object-top lg:object-center"/>
+            </li>
+            <li class="hidden lg:block">
+              <img src="./assets/images/art26.jpg" alt="art26" class="p-2 bg-black w-full h-[270px] object-cover object-top lg:object-center" />
+            </li>
+            <li class="hidden lg:block">
+              <img src="./assets/images/art22.jpg" alt="art22" class="p-2 bg-black w-full h-[270px] object-cover object-top lg:object-center"/>
+            </li>
+          </ul>
+          <div class="flex">
+            <button type="button" class="lg:hidden group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg font-squada mx-auto items-center mb-8 lg:mb-0">
+              MORE
+              <span class="triangle-rb absolute bottom-0 -right-[1px] group-hover:border-b-black"></span>
+            </button>
+          </div>
+        </div>
+        <span class="triangle-rt absolute top-0 -right-[1px] border-t-black"></span>
+        <span class="triangle-lt absolute top-0 -left-[1px] border-t-black"></span>
+      </div>
     </div>
-  </section>
+    <div class="hidden" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+      <div class="masonry-grid">
+        <div class="grid-sizer"></div>
+        <a href="#" class="group grid-item border-b border-black">
+          <div class="p-6 mb-4 bg-white">
+            <div class="relative">
+              <img src="./assets/images/art09.jpg" alt="artist09" class="w-full h-[254px] object-cover" />
+              <div class="opacity-0 group-hover:opacity-100">
+                <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+                </span>
+                <div class="absolute top-0 left-0 bottom-0 right-0 flex flex-col justify-between text-white font-squada p-4 border border-white">
+                  <div>
+                    <p class="font-noto mb-4">唯一想擁有的人，唯一不可以擁有的</p>
+                    <p class="font-squada flex leading-none">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <span>300</span>
+                    </p>
+                  </div>
+                  <button type="button" class="group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg bg-white font-squada ml-auto">
+                    MORE
+                    <span class="triangle-rb absolute bottom-0 right-0"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="font-bold mb-4">區塊戀-他的私生活</p>
+        </a>
+        <a href="#" class="group grid-item border-b border-black">
+          <div class="p-6 mb-4 bg-white">
+            <div class="relative">
+              <img src="./assets/images/art10.jpg" alt="artist10" class="w-full h-[327px] object-cover" />
+              <div class="opacity-0 group-hover:opacity-100">
+                <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+                </span>
+                <div class="absolute top-0 left-0 bottom-0 right-0 flex flex-col justify-between text-white font-squada p-4 border border-white">
+                  <div>
+                    <p class="font-noto mb-4">唯一想擁有的人，唯一不可以擁有的</p>
+                    <p class="font-squada flex leading-none">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <span>300</span>
+                    </p>
+                  </div>
+                  <button type="button" class="group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg bg-white font-squada ml-auto">
+                    MORE
+                    <span class="triangle-rb absolute bottom-0 right-0"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="font-bold mb-4">夏娃的醜聞</p>
+        </a>
+        <a href="#" class="group grid-item border-b border-black">
+          <div class="p-6 mb-4 bg-white">
+            <div class="relative">
+              <img src="./assets/images/art02.jpg" alt="artist02" class="w-full h-[254px] object-cover" />
+              <div class="opacity-0 group-hover:opacity-100">
+                <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+                </span>
+                <div class="absolute top-0 left-0 bottom-0 right-0 flex flex-col justify-between text-white font-squada p-4 border border-white">
+                  <div>
+                    <p class="font-noto mb-4">唯一想擁有的人，唯一不可以擁有的</p>
+                    <p class="font-squada flex leading-none">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <span>300</span>
+                    </p>
+                  </div>
+                  <button type="button" class="group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg bg-white font-squada ml-auto">
+                    MORE
+                    <span class="triangle-rb absolute bottom-0 right-0"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="font-bold mb-4">藍色啤酒海</p>
+        </a>
+        <a href="#" class="group grid-item border-b border-black">
+          <div class="p-6 mb-4 bg-white">
+            <div class="relative">
+              <img src="./assets/images/art11.jpg" alt="artist11" class="w-full h-[169px] object-cover" />
+              <div class="opacity-0 group-hover:opacity-100">
+                <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+                </span>
+                <div class="absolute top-0 left-0 bottom-0 right-0 flex flex-col justify-between text-white font-squada p-4 border border-white">
+                  <div>
+                    <p class="font-noto mb-4">唯一想擁有的人，唯一不可以擁有的</p>
+                    <p class="font-squada flex leading-none">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <span>300</span>
+                    </p>
+                  </div>
+                  <button type="button" class="group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg bg-white font-squada ml-auto">
+                    MORE
+                    <span class="triangle-rb absolute bottom-0 right-0"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="font-bold mb-4">沒有人愛我</p>
+        </a>
+        <a href="#" class="group grid-item border-b border-black">
+          <div class="p-6 mb-4 bg-white">
+            <div class="relative">
+              <img src="./assets/images/art27.jpg" alt="artist27" class="w-full h-[254px] object-cover" />
+              <div class="opacity-0 group-hover:opacity-100">
+                <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+                </span>
+                <div class="absolute top-0 left-0 bottom-0 right-0 flex flex-col justify-between text-white font-squada p-4 border border-white">
+                  <div>
+                    <p class="font-noto mb-4">唯一想擁有的人，唯一不可以擁有的</p>
+                    <p class="font-squada flex leading-none">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <span>300</span>
+                    </p>
+                  </div>
+                  <button type="button" class="group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg bg-white font-squada ml-auto">
+                    MORE
+                    <span class="triangle-rb absolute bottom-0 right-0"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="font-bold mb-4">我真的受傷了</p>
+        </a>
+        <a href="#" class="group grid-item border-b border-black">
+          <div class="p-6 mb-4 bg-white">
+            <div class="relative">
+              <img src="./assets/images/art12.jpg" alt="artist12" class="w-full h-[174px] object-cover" />
+              <div class="opacity-0 group-hover:opacity-100">
+                <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+                </span>
+                <div class="absolute top-0 left-0 bottom-0 right-0 flex flex-col justify-between text-white font-squada p-4 border border-white">
+                  <div>
+                    <p class="font-noto mb-4">唯一想擁有的人，唯一不可以擁有的</p>
+                    <p class="font-squada flex leading-none">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <span>300</span>
+                    </p>
+                  </div>
+                  <button type="button" class="group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg bg-white font-squada ml-auto">
+                    MORE
+                    <span class="triangle-rb absolute bottom-0 right-0"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="font-bold mb-4">不哭不哭眼淚是珍珠</p>
+        </a>
+        <a href="#" class="group grid-item border-b border-black">
+          <div class="p-6 mb-4 bg-white">
+            <div class="relative">
+              <img src="./assets/images/art04.jpg" alt="artist04" class="w-full h-[254px] object-cover object-top" />
+              <div class="opacity-0 group-hover:opacity-100">
+                <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+                </span>
+                <div class="absolute top-0 left-0 bottom-0 right-0 flex flex-col justify-between text-white font-squada p-4 border border-white">
+                  <div>
+                    <p class="font-noto mb-4">唯一想擁有的人，唯一不可以擁有的</p>
+                    <p class="font-squada flex leading-none">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <span>300</span>
+                    </p>
+                  </div>
+                  <button type="button" class="group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg bg-white font-squada ml-auto">
+                    MORE
+                    <span class="triangle-rb absolute bottom-0 right-0"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="font-bold mb-4">我這樣有美嗎</p>
+        </a>
+        <a href="#" class="group grid-item border-b border-black">
+          <div class="p-6 mb-4 bg-white">
+            <div class="relative">
+              <img src="./assets/images/art03.jpg" alt="artist03" class="w-full h-[395px] object-cover" />
+              <div class="opacity-0 group-hover:opacity-100">
+                <span class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black  opacity-50">
+                </span>
+                <div class="absolute top-0 left-0 bottom-0 right-0 flex flex-col justify-between text-white font-squada p-4 border border-white">
+                  <div>
+                    <p class="font-noto mb-4">唯一想擁有的人，唯一不可以擁有的</p>
+                    <p class="font-squada flex leading-none">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <span>300</span>
+                    </p>
+                  </div>
+                  <button type="button" class="group relative btn btn-outline-primary rounded-none py-2 px-12 text-lg bg-white font-squada ml-auto">
+                    MORE
+                    <span class="triangle-rb absolute bottom-0 right-0"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="font-bold mb-4">十分鐘就到</p>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
